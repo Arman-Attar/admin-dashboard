@@ -12,30 +12,11 @@
     height: 100vh;
 }
 
-.content {
-    background-color: #2600ff;
-    grid-row: 2/3;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    gap: 10px;
-}
-
-.announcement {
-    background-color: #fb00ff;
-    grid-column: 2/3;
-}
 
 .trending {
     background-color: #e20e0e;
     grid-column: 2/3;
 }
-
-.container div {
-    padding: 10px;
-    font-family: Helvetica;
-    font-weight: bold;
-  }
-
 
   /* Sidebar */
 
@@ -159,6 +140,57 @@
     border-radius: 60px;
     padding: 10px;
   }
+
+  /* Content section */
+
+  .content {
+    background-color: #e1e8f0;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5px;
+}
+
+.container div {
+    padding: 10px;
+  }
+
+  /* Annoucements section */
+
+  .announcement-section {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.announcement-box{
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 3px 3px rgb(0, 0, 0, 0.1);
+}
+
+.announcement-section h5 {
+    padding: 5px;
+}
+
+p {
+    color: #8e9398;
+    font-size: 12px;
+    padding: 8px;
+}
+
+.announcement {
+    padding: 10px;
+}
+
+hr {
+    border-top: 1px solid #bbb;
+}
+
 
 
 
