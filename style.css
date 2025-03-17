@@ -8,7 +8,6 @@
   display: grid;
   grid-template-columns: 1fr 4fr;
   grid-template-rows: auto 5fr;
-  height: 100vh;
 }
 
 /* Sidebar */
@@ -17,7 +16,9 @@
   grid-row: 1/3;
   background-color: #1892d3;
   display: grid;
-  grid-template-rows: 1fr 4fr 3fr;
+  grid-template-rows: repeat(3, min-content);
+  gap: 20px;
+  min-height: 100vh;
 }
 
 .sidebar-title {
@@ -54,6 +55,7 @@ li {
   fill: white;
   gap: 25px;
 }
+
 
 /* Header & search bar */
 
@@ -138,11 +140,21 @@ button {
 
 .content {
   background-color: #e1e8f0;
-  grid-row: 2/4;
+  grid-row: 2/3;
   display: grid;
   grid-template-columns: 3fr 1fr;
-  grid-template-rows: 1fr 1fr;
   gap: 5px;
+}
+
+.left-column {
+  grid-column: 1/2;
+}
+
+.right-column {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .container div {
@@ -215,9 +227,8 @@ hr {
 
 .project-box {
   display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto;
-  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 
 .project p {
@@ -230,6 +241,11 @@ hr {
   margin: 0 0 5px 0;
 }
 
+.projects {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .project-info {
   padding: 10px;
@@ -239,14 +255,18 @@ hr {
 .project {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
   background-color: #ffffff;
   border-left: 7px solid #ebb626;
-  width: 350px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
+  padding: 10px;
+}
+
+
+.projects {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
 }
 
 .icons {
